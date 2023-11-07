@@ -32,9 +32,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# start = "2010-01-01"
-
-# end = "2022-04-30"
 
 end = st.date_input("End")
 st.markdown(
@@ -94,16 +91,6 @@ data_test = pd.DataFrame(df['Close'][int(len(df)*0.70): int(len(df))])
 scaler = MinMaxScaler(feature_range=(0, 1))
 
 data_train_array = scaler.fit_transform(data_train)
-
-# Splitting data into x and y train
-# x_train = []
-# y_train = []
-
-# for i in range(100, data_train_array.shape[0]):
-#     x_train.append(data_train_array[i-100: i])
-#     y_train.append(data_train_array[i, 0])
-
-# x_train, y_train = np.array(x_train), np.array(y_train)
 
 
 # Loan model
